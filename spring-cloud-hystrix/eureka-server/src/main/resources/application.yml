@@ -1,0 +1,15 @@
+# 配置服务器端口
+server:
+  port: 8000
+# 配置eureka实例主机名
+eureka:
+  instance:
+    hostname: eureka-server
+# 表明是eureka server
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+# 设置默认的eureka server访问url
+# 默认情况下erureka server也是一个eureka client ,必须要指定一个 server
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/

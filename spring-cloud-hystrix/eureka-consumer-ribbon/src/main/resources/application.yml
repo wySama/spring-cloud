@@ -1,0 +1,12 @@
+# 配置服务器端口
+server:
+  port: 8920
+spring:
+  application:
+    name: eureka-consumer-ribbon
+# 注册服务
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8000/eureka/
+
